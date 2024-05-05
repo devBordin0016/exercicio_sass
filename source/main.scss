@@ -1,0 +1,117 @@
+@use 'config/reset';
+@use 'config/variaveis';
+
+body {
+    background-color: variaveis.$corFundo;
+}
+
+header {
+    background-color: variaveis.$corPrincipal;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        max-width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        font-weight: bold;
+        margin-left: 30px;
+    }
+
+    .menu li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    @media screen and (max-width: variaveis.$mobile) {
+        .container {
+            container: 80%;
+        }
+        img {
+            margin-left: 45px;
+        }
+        
+        .menu{
+            display: flex;
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+
+    .container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .products {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        width: 100%;
+    }
+
+    .product-item img {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .product-button {
+        display: block;
+        background-color: variaveis.$corSecundaria;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+    }
+    
+    .product-button:hover {
+        background-color: variaveis.$corHover;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    @media screen and (max-width: variaveis.$mobile) {
+        .container {
+            max-width: 80%;
+        }
+        .container h2 {
+            margin-left: 10px;
+        }
+        
+        .products {
+            display: block;
+            margin-left: 5px;
+        }
+
+        .product-item {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+
+
